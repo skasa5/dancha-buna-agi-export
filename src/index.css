@@ -1,26 +1,61 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #ffffff;
-}
-.card-hover {
-  transition: all 0.3s ease;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* =========================================
+   DANCHA BUNAGI DESIGN SYSTEM
+========================================= */
+
+:root {
+  --coffee-dark: #3A2417;
+  --coffee-medium: #4B2E1E;
+  --coffee-gold: #C89B3C;
+  --coffee-gold-hover: #D8AE4A;
+  --background-light: #FAF8F4;
+  --text-dark: #2C2C2C;
 }
 
-.card-hover:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.35) !important;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/* =========================================
+   GLOBAL STYLES
+========================================= */
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--background-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
 .nav-link {
   color: white;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.3px;
   position: relative;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #d4a017;
+  color: var(--coffee-gold);
 }
 
 .nav-link::after {
@@ -28,40 +63,61 @@ body {
   position: absolute;
   left: 0;
   bottom: -6px;
-  width: 0%;
+  width: 0;
   height: 2px;
-  background: #d4a017;
+  background: var(--coffee-gold);
   transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
   width: 100%;
 }
-footer a:hover {
-  color: #d4a017;
-  transform: scale(1.15);
-}
-.social-icon:hover {
-  transform: translateY(-3px) scale(1.1);
-}
-.social-icon {
-  transition: all 0.3s ease;
+
+/* =========================================
+   CARDS
+========================================= */
+
+.card-hover {
+  transition: all 0.35s ease;
 }
 
-.social-icon:hover {
-  transform: translateY(-4px) scale(1.1);
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25) !important;
 }
+
+/* =========================================
+   GALLERY
+========================================= */
+
 .gallery-img {
   width: 100%;
   height: 280px;
   object-fit: cover;
   border-radius: 18px;
-  transition: all 0.4s ease;
   cursor: pointer;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: all .4s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
 }
 
 .gallery-img:hover {
   transform: scale(1.04);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+  box-shadow: 0 20px 40px rgba(0,0,0,.18);
+}
+
+/* =========================================
+   SOCIAL ICONS
+========================================= */
+
+.social-icon {
+  transition: all .3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-4px) scale(1.1);
+}
+
+footer a:hover {
+  color: var(--coffee-gold);
+  transform: scale(1.15);
 }
