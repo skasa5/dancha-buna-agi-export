@@ -1,3 +1,4 @@
+import "../styles/Home.css";
 import { MapPin, Coffee, Droplets, Mountain, Award, MessageSquare, FlaskConical, Handshake, PackageCheck, Ship, Sprout, Flower2, Globe2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import dryingBeds1 from "../images/drying-beds-1.jpg";
@@ -16,243 +17,283 @@ import originLandscape from "../images/origin-landscape.jpg";
 import originQualityDrying from "../images/origin-quality-drying.jpg";
 import bean_1 from "../images/bean_1.jpg";
 import ctaCoffee from "../images/cta-coffee.jpg";
-/*hero section*/
+
+
+                /*==============hero section==================*/
 
 function Home() {
   return (
     <div>
-      <section style={heroStyle}>
-        <div style={heroOverlay}>
-          <p style={heroSubtitle}>  Premium Ethiopian Arabica Coffee  </p>
-          <h1 style={heroTitle}>From Ethiopian Highlands to the  World</h1>
-          <h2 style={heroSubtitle}>Direct from Sidama to Global Buyers</h2>
-          <p style={heroText}>
-            Traceable, export-quality Ethiopian Arabica coffee sourced through
-            trusted producer partnerships and prepared for international coffee buyers.
+    <section className="hero">
+  <div className="hero-overlay">
+
+    <p className="hero-subtitle">
+      Premium Ethiopian Arabica Coffee
+    </p>
+
+    <h1 className="hero-title">
+      From Ethiopian Highlands to the World
+    </h1>
+
+    <h2 className="hero-subheading">
+      Direct from Sidama to Global Buyers
+    </h2>
+
+    <p className="hero-text">
+      Traceable, export-quality Ethiopian Arabica coffee sourced through
+      trusted producer partnerships and prepared for international coffee buyers.
+    </p>
+
+    <Link to="/contact">
+      <button className="hero-btn">
+        Request a Quote
+      </button>
+    </Link>
+
+
+
+
+    <div className="hero-stats">
+
+      <div className="hero-stat">
+        <h2>20+</h2>
+        <p>Years of Coffee Sourcing Experience</p>
+      </div>
+
+      <div className="hero-stat">
+        <h2>2025</h2>
+        <p>Export Business Established</p>
+      </div>
+
+      <div className="hero-stat">
+        <h2>Sidama</h2>
+        <p>Premium Arabica Coffee Origin</p>
+      </div>
+
+      <div className="hero-stat">
+        <h2>G1 & G2</h2>
+        <p>Export Quality Coffee Grades</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+                {/*===============story============*/}
+
+<section className="story-section">
+  <div className="story-container">
+    <h2 className="section-title">
+      More Than a Name
+    </h2>
+    <p className="brand-subtitle">
+      Dancha BunAgi
+    </p>
+    <p className="story-intro">
+      Inspired by the language, culture, and coffee heritage of Ethiopia's
+      Sidama Highlands.
+    </p>
+    <div className="story-card">
+      <h3>
+        ☕ Dancha
+        <span> — "Good" or "Excellent"</span>
+      </h3>
+      <p>
+        In the Sidama language,
+        <strong> Dancha </strong>
+        represents quality, excellence, and a positive experience.
+        It reflects the standard we strive to achieve in every coffee we export.
+      </p>
+    </div>
+    <div className="story-card">
+      <h3>
+        🌿 Buna
+        <span> — "Coffee"</span>
+      </h3>
+      <p>
+        <strong>Buna</strong> is the Amharic word for coffee,
+        honouring Ethiopia's rich coffee heritage as the birthplace
+        of Arabica coffee.
+      </p>
+    </div>
+    <div className="story-card">
+      <h3>
+        🍃 Agi
+        <span> — "Drink"</span>
+      </h3>
+      <p>
+        In the Sidama language,
+        <strong> Agi </strong>
+        means drink, completing the meaning behind our brand.
+      </p>
+    </div>
+    <div className="meaning-box">
+      <h2>
+        "Drink Good Coffee"
+      </h2>
+      <p>
+        Together,
+        <strong> Dancha BunAgi </strong>
+        means
+        <strong> "Drink Good Coffee."</strong>
+        <br /><br />
+        More than a name, it reflects our commitment to delivering
+        exceptional Ethiopian Arabica coffee while building trusted,
+        long-term partnerships with coffee roasters, importers,
+        and wholesalers around the world.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+                       {/* =========our cofee journey==============*/}
+
+<section className="journey-section">
+
+  <div className="container">
+
+    <h2 className="section-title">
+      Our Coffee Journey at Origin
+    </h2>
+
+    <p className="journey-intro">
+      Every coffee bean follows a carefully managed journey through Ethiopia's
+      Sidama Highlands—from hand harvesting to export-ready preparation.
+    </p>
+
+    <div className="journey-grid">
+
+      <div className="journey-card">
+        <img src={originCherries} alt="Hand Harvesting" />
+        <div className="journey-body">
+          <h3>Hand Harvesting</h3>
+          <p>
+            Only fully ripe coffee cherries are carefully hand-picked to ensure
+            outstanding cup quality.
           </p>
-
-          <Link to="/contact">
-            <button style={buttonStyle}>Request a Quote</button> </Link>
-
-
-          <section style={{ padding: "80px 20px", background: "rgba(248, 243, 235, 0)" }}>
-            <div
-              style={{
-                maxWidth: "1200px",
-                margin: "0 auto",
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-                gap: "30px",
-                textAlign: "center",
-              }}
-            >
-              <div>
-                <h2 style={{ fontSize: "32px", color: "#d4a017" }}>20+</h2> <p>Years of Coffee Sourcing Experience, </p></div>
-
-              <div>
-                <h2 style={{ fontSize: "32px", color: "#d4a017" }}>2025</h2> <p>Export Business Established</p></div>
-
-              <div>
-                <h2 style={{ fontSize: "32px", color: "#d4a017" }}>Sidama</h2> <p>Premium Arabica Coffee Origin</p> </div>
-
-              <div>
-                <h2 style={{ fontSize: "32px", color: "#d4a017" }}>G1 & G2</h2> <p>Export Quality Coffee Grades</p> </div>
-            </div>
-          </section>
         </div>
-      </section>
+      </div>
 
-
-
-
-      <section style={highlightsSection}>
-        <div style={highlightGrid}>
-          <div style={highlightCard} className="card-hover">
-            <MapPin size={34} color="#C89B3C" strokeWidth={1.8} />
-            <h3 style={highlightValue}>Sidama, Ethiopia</h3>
-            <p style={highlightLabel}>Origin</p>
-          </div>
-
-          <div style={highlightCard} className="card-hover">
-            <Coffee size={34} color="#C89B3C" strokeWidth={1.8} />
-            <h3 style={highlightValue}>Arabica</h3>
-            <p style={highlightLabel}>Coffee Species</p>
-          </div>
-
-          <div style={highlightCard} className="card-hover">
-            <Droplets size={34} color="#C89B3C" strokeWidth={1.8} />
-            <h3 style={highlightValue}>Washed</h3>
-            <p style={highlightLabel}>Processing</p>
-          </div>
-
-          <div style={highlightCard} className="card-hover">
-            <Mountain size={34} color="#C89B3C" strokeWidth={1.8} />
-            <h3 style={highlightValue}>1700–2200 m</h3>
-            <p style={highlightLabel}>Growing Altitude</p>
-          </div>
-
-          <div style={highlightCard} className="card-hover">
-            <Award size={34} color="#C89B3C" strokeWidth={1.8} />
-            <h3 style={highlightValue}>Grade 1 & Grade 2</h3>
-            <p style={highlightLabel}>Export Quality</p>
-          </div>
-
-        </div>
-      </section>
-
-
-
-      <section style={nameSection}>
-        <div style={storyBox}>
-          <h2 style={sectionTitle}>More Than a Name</h2>
-          <p style={brandSubtitle}> Dancha BunAgi </p>
-          <p style={nameIntro}>
-            Inspired by the language, culture, and coffee heritage of Ethiopia's
-            Sidama Highlands.
+      <div className="journey-card">
+        <img src={originSorting} alt="Sorting" />
+        <div className="journey-body">
+          <h3>Manual Sorting</h3>
+          <p>
+            Every lot is carefully sorted before processing to maintain export
+            standards.
           </p>
-          {/* Dancha */}
-          <div style={nameItem}>
-            <h3 style={nameTitle}>☕ Dancha<span style={meaningInline}> — "Good" or "Excellent"</span></h3>
-            <p style={nameText}>
-              In the Sidama language, <strong>Dancha</strong> represents quality,
-              excellence, and a positive experience. It reflects the standard we
-              strive to achieve in every coffee we export.
-            </p>
-          </div>
-          {/* Buna */}
-          <div style={nameItem}>
-            <h3 style={nameTitle}>🌿 Buna <span style={meaningInline}> — "coffee"</span></h3>
-            <p style={nameText}>
-              <strong>Buna</strong> is the Amharic word for coffee, honouring
-              Ethiopia's rich coffee heritage as the birthplace of Arabica coffee.
-            </p>
-          </div>
-          {/* Agi */}
-          <div style={nameItem}>
-            <h3 style={nameTitle}>🍃 Agi<span style={meaningInline}> — "Drink"</span></h3>
-            <p style={nameText}>
-              In the Sidama language, <strong>Agi</strong> means drink, completing
-              the meaning behind our brand.
-            </p>
-          </div>
-          <div style={meaningBox}>
-            <div style={goldLine}></div>
-            <h2 style={meaningTitle}>
-              "Drink Good Coffee"
-            </h2>
-            <div style={goldLine}></div>
-            <p style={meaningText}>
-              Together, <strong>Dancha BunAgi</strong> means
-              <strong> "Drink Good Coffee."</strong>
-              <br /><br />
-              More than a name, it reflects our commitment to delivering exceptional
-              Ethiopian Arabica coffee while building trusted, long-term partnerships
-              with coffee roasters, importers, and wholesalers around the world. </p>
-          </div>
         </div>
-      </section>
+      </div>
+
+      <div className="journey-card">
+        <img src={originWashing} alt="Washing" />
+        <div className="journey-body">
+          <h3>Washed Processing</h3>
+          <p>
+            Traditional washed processing produces the clean and bright Sidama
+            flavour profile.
+          </p>
+        </div>
+      </div>
+
+      <div className="journey-card">
+        <img src={originDryingStation} alt="Drying" />
+        <div className="journey-body">
+          <h3>Raised Drying Beds</h3>
+          <p>
+            Coffee dries evenly on raised African beds under constant monitoring.
+          </p>
+        </div>
+      </div>
+
+      <div className="journey-card">
+        <img src={originLandscape} alt="Sidama" />
+        <div className="journey-body">
+          <h3>Sidama Highlands</h3>
+          <p>
+            Rich volcanic soil and high altitude create Ethiopia's finest Arabica
+            coffee.
+          </p>
+        </div>
+      </div>
+
+      <div className="journey-card">
+        <img src={originQualityDrying} alt="Export" />
+        <div className="journey-body">
+          <h3>Export Preparation</h3>
+          <p>
+            Every shipment is inspected, packed and prepared for international
+            buyers.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 
-      <section style={originSection}>
-        <h2 style={sectionTitle}>Our Coffee Journey at Origin</h2>
-        <p style={originIntro}>
-          <p style={originIntro}>Every coffee bean follows a carefully managed journey through Ethiopia's Sidama Highlands—from hand harvesting and traditional washed processing to export-ready preparation for international buyers.</p>
+<section className="process-section">
+
+  <div className="container">
+
+    <h2 className="section-title">
+      Our Export Process
+    </h2>
+
+    <div className="process-grid">
+
+      <div className="process-card">
+        <MessageSquare size={42} color="#C89B3C" strokeWidth={1.8}/>
+        <h3>Inquiry</h3>
+        <p>
+          Contact us with your coffee requirements and preferred specifications.
         </p>
+      </div>
 
-        <div style={galleryGrid}>
-          <div style={journeyCard} className="card-hover">
-            <img src={originCherries} alt="Handpicked Coffee Cherries" style={galleryImage} />
-            <div style={journeyText}>
+      <div className="process-card">
+        <FlaskConical size={42} color="#C89B3C" strokeWidth={1.8}/>
+        <h3>Sample Request</h3>
+        <p>
+          Coffee samples are prepared and shipped for evaluation before ordering.
+        </p>
+      </div>
 
+      <div className="process-card">
+        <Handshake size={42} color="#C89B3C" strokeWidth={1.8}/>
+        <h3>Order Confirmation</h3>
+        <p>
+          Quantity, quality, packaging and pricing are agreed before production.
+        </p>
+      </div>
 
+      <div className="process-card">
+        <PackageCheck size={42} color="#C89B3C" strokeWidth={1.8}/>
+        <h3>Preparation</h3>
+        <p>
+          Coffee is processed, inspected and packed according to export standards.
+        </p>
+      </div>
 
+      <div className="process-card">
+        <Ship size={42} color="#C89B3C" strokeWidth={1.8}/>
+        <h3>Shipment</h3>
+        <p>
+          Export documents are completed and the shipment is prepared for delivery.
+        </p>
+      </div>
 
+    </div>
 
-              <h3 style={{ fontSize: "22px", color: "#C89B3C", marginBottom: "15px", fontWeight: "600", }}>
-                Hand Harvesting</h3>
-              <p>Only fully ripe coffee cherries are carefully hand-picked to ensure consistent quality and flavour from the very beginning of the journey.</p>
-            </div>
-          </div>
+  </div>
 
-          <div style={journeyCard} className="card-hover">
-            <img src={originSorting} alt="Careful Manual Sorting" style={galleryImage} />
-            <div style={journeyText}>
-              <h3 style={{ fontSize: "22px", color: "#C89B3C", marginBottom: "15px", fontWeight: "600", }}>
-                Careful Manual Sorting</h3>
-              <p> Workers sort coffee carefully to support consistent quality.</p>
-            </div>
-          </div>
+</section>
 
-          <div style={journeyCard} className="card-hover">
-            <img src={originWashing} alt="Traditional Washed Processing" style={galleryImage} />
-            <div style={journeyText}>
-              <h3 style={{ fontSize: "22px", color: "#C89B3C", marginBottom: "15px", fontWeight: "600", }}>
-                Traditional Washed Processing</h3>
-              <p>Traditional washed processing enhances clarity, brightness, and the distinctive flavour profile of Sidama Arabica coffee.</p>
-            </div>
-          </div>
-
-          <div style={journeyCard} className="card-hover">
-            <img src={originDryingStation} alt="Raised Drying Beds" style={galleryImage} />
-            <div style={journeyText}>
-              <h3 style={{ fontSize: "22px", color: "#C89B3C", marginBottom: "15px", fontWeight: "600", }}>
-                Raised Drying Beds</h3>
-              <p>Traditional washed processing enhances clarity, brightness, and the distinctive flavour profile of Sidama Arabica coffee.</p>
-            </div>
-          </div>
-
-          <div style={journeyCard} className="card-hover">
-            <img src={originLandscape} alt="Sidama Highlands" style={galleryImage} />
-            <div style={journeyText}>
-              <h3 style={{ fontSize: "22px", color: "#C89B3C", marginBottom: "15px", fontWeight: "600", }}>
-                Sidama Highlands</h3>
-              <p>The fertile soils and high elevations of Sidama create the ideal environment for producing exceptional Arabica coffee.</p>
-            </div>
-          </div>
-
-          <div style={journeyCard} className="card-hover">
-            <img src={originQualityDrying} alt="Export Quality Preparation" style={galleryImage} />
-            <div style={journeyText}>
-              <h3 style={{ fontSize: "22px", color: "#C89B3C", marginBottom: "15px", fontWeight: "600", }}>
-                Export Quality Preparation</h3>
-              <p>Every lot is inspected, prepared, and packed according to export standards before shipment to customers around the world.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-
-
-      <section style={processSection}>
-        <h2 style={sectionTitle}>Our Export Process</h2>
-
-        <div style={processGrid}>
-          <div style={processCard} className="card-hover"><>
-            <MessageSquare size={42} color="#C89B3C" strokeWidth={1.8} />
-            <h3 style={processTitle}>Inquiry</h3>
-          </><p>Contact us with your coffee requirements.</p></div>
-          <div style={processCard} className="card-hover"><>
-            <FlaskConical size={42} color="#C89B3C" strokeWidth={1.8} />
-            <h3 style={processTitle}>Sample Request</h3>
-          </><p>Samples can be prepared for evaluation.</p></div>
-          <div style={processCard} className="card-hover"><>
-            <Handshake size={42} color="#C89B3C" strokeWidth={1.8} />
-            <h3 style={processTitle}>Order Confirmation</h3>
-          </><p>Agree on quality, quantity, and pricing.</p></div>
-          <div style={processCard} className="card-hover"><>
-            <PackageCheck size={42} color="#C89B3C" strokeWidth={1.8} />
-            <h3 style={processTitle}>Preparation</h3>
-          </><p>Coffee is prepared to export standards.</p></div>
-          <div style={processCard} className="card-hover"><>
-            <Ship size={42} color="#C89B3C" strokeWidth={1.8} />
-            <h3 style={processTitle}>Shipment</h3>
-          </><p>Export documentation and logistics coordination.</p></div>
-        </div>
-      </section>
-
-
-
+                        {/*========== coffee bean ===========*/}
 
       <section>
         <div style={beanContainer}>
@@ -261,7 +302,7 @@ function Home() {
         </div>
       </section>
 
-
+                  {/*========== why sidama coffee ===========*/}
 
       <section style={sidamaSection}>
         <h2 style={sectionTitle}>Why Sidama Coffee?</h2>
@@ -290,73 +331,106 @@ function Home() {
       </section>
 
 
+<section className="partner-section">
 
-      <section style={whySection}>
-        <div style={whyContainer}>
-          <div>
-            <img
-              src={originLandscape}
-              alt="Sidama Coffee Landscape"
-              style={whyImage} /></div>
-          <div>
-            <h2 style={sectionTitle}>Why Partner with Dancha BunAgi Export</h2>
+  <div className="container partner-grid">
 
-            <h3 style={whySubtitle}>
-              More Than a Supplier — A Trusted Ethiopian Coffee Export Partner
-            </h3>
+    <div className="partner-image">
 
-            <p style={paragraph}>
-              Dancha BunAgi Export combines more than <strong>20 years of family
-                experience</strong> in Ethiopian coffee sourcing with a modern export
-              company established in <strong>2025</strong>. Our deep roots in the
-              Sidama coffee-growing region allow us to work directly with trusted
-              farmers and washing stations, ensuring every shipment reflects the
-              quality and authenticity Ethiopia is known for.
-            </p>
+      <img
+        src={originLandscape}
+        alt="Sidama Coffee Landscape"
+      />
 
-            <p style={paragraph}>
-              We believe exporting coffee is about more than supplying beans.
-              It is about building long-term partnerships based on transparency,
-              reliability, and consistent quality. Every lot is carefully selected,
-              processed, and prepared according to international export standards.
-            </p>
+    </div>
 
-            <p style={paragraph}>
-              Whether you are a specialty coffee roaster, importer, wholesaler,
-              or distributor, our goal is to provide premium Ethiopian Arabica
-              coffee together with professional service from inquiry to delivery.
-            </p>
+    <div className="partner-content">
 
-            <div style={featureGrid}>
+      <h2 className="section-title">
+        Why Partner With Dancha BunAgi Export
+      </h2>
 
-              <div style={featureCard}>
-                <Award size={20} color="#C89B3C" /><span>Direct sourcing from Sidama farmers</span></div>
+      <h3 className="partner-subtitle">
+        More Than a Supplier — A Trusted Ethiopian Coffee Export Partner
+      </h3>
 
-              <div style={featureCard}>
-                <Award size={20} color="#C89B3C" /><span>Premium washed Arabica coffee</span></div>
+      <p>
+        Dancha BunAgi Export combines more than
+        <strong> 20 years of family experience </strong>
+        in Ethiopian coffee sourcing with a modern export company
+        established in
+        <strong> 2025</strong>.
+      </p>
 
-              <div style={featureCard}>
-                <Award size={20} color="#C89B3C" /><span>20+ years family experience</span></div>
+      <p>
+        Our deep roots in the Sidama coffee-growing region allow us
+        to work directly with trusted farmers and washing stations,
+        ensuring every shipment reflects the quality and authenticity
+        Ethiopia is known for.
+      </p>
 
-              <div style={featureCard}>
-                <Award size={20} color="#C89B3C" /><span>Export company established in 2025</span></div>
+      <p>
+        We believe exporting coffee is about more than supplying
+        beans. It is about building long-term partnerships based on
+        transparency, reliability and consistent quality.
+      </p>
 
-              <div style={featureCard}>
-                <Award size={20} color="#C89B3C" /><span>Full traceability</span></div>
+      <p>
+        Whether you are a specialty coffee roaster, importer,
+        wholesaler or distributor, our goal is to provide premium
+        Ethiopian Arabica coffee together with professional service
+        from inquiry to delivery.
+      </p>
 
-              <div style={featureCard}>
-                <Award size={20} color="#C89B3C" /><span>Flexible export solutions</span></div>
+      <div className="partner-features">
 
-              <div style={featureCard}>
-                <Award size={20} color="#C89B3C" /><span>Reliable logistics support</span></div>
-
-              <div style={featureCard}>
-                <Award size={20} color="#C89B3C" /><span>Long-term business partnerships</span></div>
-            </div>
-          </div>
+        <div className="feature-item">
+          <Award size={20}/>
+          <span>Direct sourcing from Sidama farmers</span>
         </div>
-      </section>
 
+        <div className="feature-item">
+          <Award size={20}/>
+          <span>Premium Washed Arabica Coffee</span>
+        </div>
+
+        <div className="feature-item">
+          <Award size={20}/>
+          <span>20+ Years Family Experience</span>
+        </div>
+
+        <div className="feature-item">
+          <Award size={20}/>
+          <span>Established Export Company</span>
+        </div>
+
+        <div className="feature-item">
+          <Award size={20}/>
+          <span>Full Traceability</span>
+        </div>
+
+        <div className="feature-item">
+          <Award size={20}/>
+          <span>Flexible Export Solutions</span>
+        </div>
+
+        <div className="feature-item">
+          <Award size={20}/>
+          <span>Reliable Logistics Support</span>
+        </div>
+
+        <div className="feature-item">
+          <Award size={20}/>
+          <span>Long-Term Partnerships</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 
       <section style={ctaStyle}>
@@ -441,7 +515,11 @@ function Home() {
         <div style={chatText}>Chat with us 👋</div>
         <a href="https://wa.me/447412659033" target="_blank" rel="noreferrer" style={chatButton}>💬</a>
       </div>
+
+    
+    
     </div>
+    
   );
 }
 
@@ -508,46 +586,7 @@ const buttonStyle = {
 };
 
 
-/*=========highlight section=======*/
 
-const highlightsSection = {
-  padding: "40px 20px 20px",
-  background: "#FAF8F4",
-};
-
-const highlightGrid = {
-  maxWidth: "1300px",
-  margin: "0 auto",
-  display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-  gap: "25px",
-};
-
-const highlightCard = {
-  background: "#ffffff",
-  padding: "10px 10px",
-  borderRadius: "18px",
-  textAlign: "center",
-  boxShadow: "0 12px 30px rgba(0,0,0,0.08)",
-  transition: "all .35s ease",
-  cursor: "pointer",
-  border: "1px solid rgba(0,0,0,.05)",
-};
-
-const highlightValue = {
-  marginTop: "20px",
-  marginBottom: "8px",
-  color: "#3A2417",
-  fontSize: "24px",
-  fontWeight: "600",
-};
-
-const highlightLabel = {
-  color: "#777",
-  fontSize: "15px",
-  letterSpacing: "0.6px",
-  textTransform: "uppercase",
-};
 
 /*============= story section ============*/
 
@@ -1045,13 +1084,13 @@ const footerStyle = {
   padding: "80px 50px 35px",
   borderTop: "2px solid #C89B3C",
 };
+
 const footerGrid = {
   display: "grid",
-  gridTemplateColumns: "2fr 1fr 1fr 1fr",
-  gap: "80px",
+  gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+  gap: "100px",
   maxWidth: "1200px",
   margin: "0 auto",
-  alignItems: "start",
 };
 
 const chatStyle = {
@@ -1101,3 +1140,20 @@ const footerIcon = {
 
 
 export default Home;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
