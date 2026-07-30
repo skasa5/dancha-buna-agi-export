@@ -1,3 +1,4 @@
+import { MapPin, Coffee, Droplets, Mountain, Award, MessageSquare, FlaskConical, Handshake, PackageCheck, Ship, Sprout, Flower2, Globe2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import dryingBeds1 from "../images/drying-beds-1.jpg";
 import dryingBeds2 from "../images/drying-beds-2.jpg";
@@ -14,7 +15,8 @@ import originDryingStation from "../images/origin-drying-station.jpg";
 import originLandscape from "../images/origin-landscape.jpg";
 import originQualityDrying from "../images/origin-quality-drying.jpg";
 import bean_1 from "../images/bean_1.jpg";
-
+import ctaCoffee from "../images/cta-coffee.jpg";
+/*hero section*/
 
 function Home() {
   return (
@@ -22,11 +24,11 @@ function Home() {
       <section style={heroStyle}>
         <div style={heroOverlay}>
           <p style={heroSubtitle}>  Premium Ethiopian Arabica Coffee  </p>
-          <h1 style={heroTitle}>From Ethiopian Highlands To The wolrd</h1>
+          <h1 style={heroTitle}>From Ethiopian Highlands to the  World</h1>
           <h2 style={heroSubtitle}>Direct from Sidama to Global Buyers</h2>
           <p style={heroText}>
-            Traceable, export-quality washed Arabica coffee sourced through
-            trusted producer relationships in the Sidama region of Ethiopia.
+            Traceable, export-quality Ethiopian Arabica coffee sourced through
+            trusted producer partnerships and prepared for international coffee buyers.
           </p>
 
           <Link to="/contact">
@@ -60,151 +62,160 @@ function Home() {
         </div>
       </section>
 
+
+
+
       <section style={highlightsSection}>
         <div style={highlightGrid}>
-          <div style={highlightCard}>📍<br />Sidama<br /><span>Origin</span></div>
-          <div style={highlightCard}>☕<br />Arabica<br /><span>Species</span></div>
-          <div style={highlightCard}>💧<br />Washed<br /><span>Process</span></div>
-          <div style={highlightCard}>⛰️<br />1700–2200m<br /><span>Altitude</span></div>
-          <div style={highlightCard}>⭐<br />Export Quality<br /><span>Grade</span></div>
+          <div style={highlightCard} className="card-hover">
+            <MapPin size={34} color="#C89B3C" strokeWidth={1.8} />
+            <h3 style={highlightValue}>Sidama, Ethiopia</h3>
+            <p style={highlightLabel}>Origin</p>
+          </div>
+
+          <div style={highlightCard} className="card-hover">
+            <Coffee size={34} color="#C89B3C" strokeWidth={1.8} />
+            <h3 style={highlightValue}>Arabica</h3>
+            <p style={highlightLabel}>Coffee Species</p>
+          </div>
+
+          <div style={highlightCard} className="card-hover">
+            <Droplets size={34} color="#C89B3C" strokeWidth={1.8} />
+            <h3 style={highlightValue}>Washed</h3>
+            <p style={highlightLabel}>Processing</p>
+          </div>
+
+          <div style={highlightCard} className="card-hover">
+            <Mountain size={34} color="#C89B3C" strokeWidth={1.8} />
+            <h3 style={highlightValue}>1700–2200 m</h3>
+            <p style={highlightLabel}>Growing Altitude</p>
+          </div>
+
+          <div style={highlightCard} className="card-hover">
+            <Award size={34} color="#C89B3C" strokeWidth={1.8} />
+            <h3 style={highlightValue}>Grade 1 & Grade 2</h3>
+            <p style={highlightLabel}>Export Quality</p>
+          </div>
+
         </div>
       </section>
 
-    
-
-<section style={nameSection}>
- <div style={storyBox}>
-  <h2 style={sectionTitle}>The Story Behind Our Name</h2>
-
-  <p style={nameIntro}>
-    Inspired by the language, culture, and coffee heritage of Ethiopia's
-    Sidama Highlands.
-  </p>
-
-  {/* Dancha */}
-
-  <div style={nameItem}>
-   <h3 style={nameTitle}>☕ Dancha<span style={meaningInline}> — "Good" or "Excellent"</span></h3>
 
 
-
-    <p style={nameText}>
-      In the Sidama language, <strong>Dancha</strong> represents quality,
-      excellence, and a positive experience. It reflects the standard we
-      strive to achieve in every coffee we export.
-    </p>
-  </div>
-
-
-
-  {/* Buna */}
-
-  <div style={nameItem}> 
-    <h3 style={nameTitle}>🌿 Buna <span style={meaningInline}> — "coffee"</span></h3>
-
-
-   
-    <p style={nameText}>
-      <strong>Buna</strong> is the Amharic word for coffee, honouring
-      Ethiopia's rich coffee heritage as the birthplace of Arabica coffee.
-    </p>
-  </div>
-
-  
-
-  {/* Agi */}
-
-  <div style={nameItem}>
-    <h3 style={nameTitle}>🍃 Agi<span style={meaningInline}> — "Drink"</span></h3>
-
-    
-    <p style={nameText}>
-      In the Sidama language, <strong>Agi</strong> means drink, completing
-      the meaning behind our brand.
-    </p>
-  </div>
-
-  <div style={meaningBox}>
-
-  <div style={goldLine}></div>
-
-  <h2 style={meaningTitle}>
-    "Drink Good Coffee"
-  </h2>
-
-  <div style={goldLine}></div>
-
-  <p style={meaningText}>
-    Together, <strong>Dancha BunAgi</strong> means
-    <strong> "Drink Good Coffee."</strong>
-
-    <br /><br />
-
-    More than a name, it reflects our commitment to delivering
-    premium Ethiopian Arabica coffee from the Sidama Highlands
-    while building trusted partnerships with coffee roasters,
-    importers, and wholesalers around the world.
-  </p>
-
-</div>
-</div>
-
- </section>
+      <section style={nameSection}>
+        <div style={storyBox}>
+          <h2 style={sectionTitle}>More Than a Name</h2>
+          <p style={brandSubtitle}> Dancha BunAgi </p>
+          <p style={nameIntro}>
+            Inspired by the language, culture, and coffee heritage of Ethiopia's
+            Sidama Highlands.
+          </p>
+          {/* Dancha */}
+          <div style={nameItem}>
+            <h3 style={nameTitle}>☕ Dancha<span style={meaningInline}> — "Good" or "Excellent"</span></h3>
+            <p style={nameText}>
+              In the Sidama language, <strong>Dancha</strong> represents quality,
+              excellence, and a positive experience. It reflects the standard we
+              strive to achieve in every coffee we export.
+            </p>
+          </div>
+          {/* Buna */}
+          <div style={nameItem}>
+            <h3 style={nameTitle}>🌿 Buna <span style={meaningInline}> — "coffee"</span></h3>
+            <p style={nameText}>
+              <strong>Buna</strong> is the Amharic word for coffee, honouring
+              Ethiopia's rich coffee heritage as the birthplace of Arabica coffee.
+            </p>
+          </div>
+          {/* Agi */}
+          <div style={nameItem}>
+            <h3 style={nameTitle}>🍃 Agi<span style={meaningInline}> — "Drink"</span></h3>
+            <p style={nameText}>
+              In the Sidama language, <strong>Agi</strong> means drink, completing
+              the meaning behind our brand.
+            </p>
+          </div>
+          <div style={meaningBox}>
+            <div style={goldLine}></div>
+            <h2 style={meaningTitle}>
+              "Drink Good Coffee"
+            </h2>
+            <div style={goldLine}></div>
+            <p style={meaningText}>
+              Together, <strong>Dancha BunAgi</strong> means
+              <strong> "Drink Good Coffee."</strong>
+              <br /><br />
+              More than a name, it reflects our commitment to delivering exceptional
+              Ethiopian Arabica coffee while building trusted, long-term partnerships
+              with coffee roasters, importers, and wholesalers around the world. </p>
+          </div>
+        </div>
+      </section>
 
 
       <section style={originSection}>
         <h2 style={sectionTitle}>Our Coffee Journey at Origin</h2>
-
         <p style={originIntro}>
-          From handpicked cherries to careful washing and raised-bed drying, our coffee is prepared in Sidama with attention to quality, traceability, and export readiness.
+          <p style={originIntro}>Every coffee bean follows a carefully managed journey through Ethiopia's Sidama Highlands—from hand harvesting and traditional washed processing to export-ready preparation for international buyers.</p>
         </p>
 
         <div style={galleryGrid}>
           <div style={journeyCard} className="card-hover">
             <img src={originCherries} alt="Handpicked Coffee Cherries" style={galleryImage} />
             <div style={journeyText}>
-              <h3>Handpicked Coffee Cherries</h3>
-              <p>Ripe cherries selected from the Sidama highlands.</p>
+
+
+
+
+
+              <h3 style={{ fontSize: "22px", color: "#C89B3C", marginBottom: "15px", fontWeight: "600", }}>
+                Hand Harvesting</h3>
+              <p>Only fully ripe coffee cherries are carefully hand-picked to ensure consistent quality and flavour from the very beginning of the journey.</p>
             </div>
           </div>
 
           <div style={journeyCard} className="card-hover">
             <img src={originSorting} alt="Careful Manual Sorting" style={galleryImage} />
             <div style={journeyText}>
-              <h3>Careful Manual Sorting</h3>
-              <p>Workers sort coffee carefully to support consistent quality.</p>
+              <h3 style={{ fontSize: "22px", color: "#C89B3C", marginBottom: "15px", fontWeight: "600", }}>
+                Careful Manual Sorting</h3>
+              <p> Workers sort coffee carefully to support consistent quality.</p>
             </div>
           </div>
 
           <div style={journeyCard} className="card-hover">
             <img src={originWashing} alt="Traditional Washed Processing" style={galleryImage} />
             <div style={journeyText}>
-              <h3>Traditional Washed Processing</h3>
-              <p>Coffee is washed and prepared using traditional processing methods.</p>
+              <h3 style={{ fontSize: "22px", color: "#C89B3C", marginBottom: "15px", fontWeight: "600", }}>
+                Traditional Washed Processing</h3>
+              <p>Traditional washed processing enhances clarity, brightness, and the distinctive flavour profile of Sidama Arabica coffee.</p>
             </div>
           </div>
 
           <div style={journeyCard} className="card-hover">
             <img src={originDryingStation} alt="Raised Drying Beds" style={galleryImage} />
             <div style={journeyText}>
-              <h3>Raised Drying Beds</h3>
-              <p>Drying beds help protect quality during preparation.</p>
+              <h3 style={{ fontSize: "22px", color: "#C89B3C", marginBottom: "15px", fontWeight: "600", }}>
+                Raised Drying Beds</h3>
+              <p>Traditional washed processing enhances clarity, brightness, and the distinctive flavour profile of Sidama Arabica coffee.</p>
             </div>
           </div>
 
           <div style={journeyCard} className="card-hover">
             <img src={originLandscape} alt="Sidama Highlands" style={galleryImage} />
             <div style={journeyText}>
-              <h3>Sidama Highlands</h3>
-              <p>High altitude and rich growing conditions shape the coffee character.</p>
+              <h3 style={{ fontSize: "22px", color: "#C89B3C", marginBottom: "15px", fontWeight: "600", }}>
+                Sidama Highlands</h3>
+              <p>The fertile soils and high elevations of Sidama create the ideal environment for producing exceptional Arabica coffee.</p>
             </div>
           </div>
 
           <div style={journeyCard} className="card-hover">
             <img src={originQualityDrying} alt="Export Quality Preparation" style={galleryImage} />
             <div style={journeyText}>
-              <h3>Export Quality Preparation</h3>
-              <p>Coffee is dried and prepared with international buyers in mind.</p>
+              <h3 style={{ fontSize: "22px", color: "#C89B3C", marginBottom: "15px", fontWeight: "600", }}>
+                Export Quality Preparation</h3>
+              <p>Every lot is inspected, prepared, and packed according to export standards before shipment to customers around the world.</p>
             </div>
           </div>
         </div>
@@ -217,74 +228,78 @@ function Home() {
         <h2 style={sectionTitle}>Our Export Process</h2>
 
         <div style={processGrid}>
-          <div style={processCard} className="card-hover"><h3>📩Inquiry</h3><p>Contact us with your coffee requirements.</p></div>
-          <div style={processCard} className="card-hover"><h3>☕Sample Request</h3><p>Samples can be prepared for evaluation.</p></div>
-          <div style={processCard} className="card-hover"><h3>🤝Order Confirmation</h3><p>Agree on quality, quantity, and pricing.</p></div>
-          <div style={processCard} className="card-hover"><h3>📦Preparation</h3><p>Coffee is prepared to export standards.</p></div>
-          <div style={processCard} className="card-hover"><h3>🚢Shipment</h3><p>Export documentation and logistics coordination.</p></div>
+          <div style={processCard} className="card-hover"><>
+            <MessageSquare size={42} color="#C89B3C" strokeWidth={1.8} />
+            <h3 style={processTitle}>Inquiry</h3>
+          </><p>Contact us with your coffee requirements.</p></div>
+          <div style={processCard} className="card-hover"><>
+            <FlaskConical size={42} color="#C89B3C" strokeWidth={1.8} />
+            <h3 style={processTitle}>Sample Request</h3>
+          </><p>Samples can be prepared for evaluation.</p></div>
+          <div style={processCard} className="card-hover"><>
+            <Handshake size={42} color="#C89B3C" strokeWidth={1.8} />
+            <h3 style={processTitle}>Order Confirmation</h3>
+          </><p>Agree on quality, quantity, and pricing.</p></div>
+          <div style={processCard} className="card-hover"><>
+            <PackageCheck size={42} color="#C89B3C" strokeWidth={1.8} />
+            <h3 style={processTitle}>Preparation</h3>
+          </><p>Coffee is prepared to export standards.</p></div>
+          <div style={processCard} className="card-hover"><>
+            <Ship size={42} color="#C89B3C" strokeWidth={1.8} />
+            <h3 style={processTitle}>Shipment</h3>
+          </><p>Export documentation and logistics coordination.</p></div>
         </div>
       </section>
 
-<section>
-  <div style={beanContainer}>
-    <div style={beanCard} className="card-hover">
-      <img
-        src={bean_1}
-        alt="coffee bean"
-        style={beanImage}
-      />
-    </div>
-  </div>
-</section>
+
+
+
+      <section>
+        <div style={beanContainer}>
+          <div style={beanCard} className="card-hover">
+            <img src={bean_1} alt="coffee bean" style={beanImage} /></div>
+        </div>
+      </section>
+
+
 
       <section style={sidamaSection}>
-        <h2 style={{
-          sectionTitle,
-          fontSize: "40px",
-          marginBottom: "20px",
-          textAlign: "center",
-          color: "#4b2e1e",
-        }}
-        >Why Sidama Coffee?</h2>
-
+        <h2 style={sectionTitle}>Why Sidama Coffee?</h2>
         <div style={sidamaGrid}>
+
           <div style={sidamaCard} className="card-hover">
-            <h3>⛰️ High Altitude</h3>
+            <Mountain size={42} color="#C89B3C" strokeWidth={1.8} />
+            <h3 style={sidamaTitle}>High Altitude</h3>
             <p>Coffee grown between 1700 and 2200 meters above sea level.</p></div>
 
           <div style={sidamaCard} className="card-hover">
-            <h3>🌋 Rich Soil</h3>
+            <Sprout size={42} color="#C89B3C" strokeWidth={1.8} />
+            <h3 style={sidamaTitle}> Rich Soil</h3>
             <p>Fertile soil helps create complex flavor profiles.</p></div>
 
           <div style={sidamaCard} className="card-hover">
-            <h3>🌸 Floral Notes</h3>
+            <Flower2 size={42} color="#C89B3C" strokeWidth={1.8} />
+            <h3 style={sidamaTitle}> Floral Notes</h3>
             <p>Known for bright acidity, floral aromas, and citrus character.</p></div>
 
           <div style={sidamaCard} className="card-hover">
-            <h3>☕ Global Reputation</h3>
+            <Globe2 size={42} color="#C89B3C" strokeWidth={1.8} />
+            <h3 style={sidamaTitle}> Global Reputation</h3>
             <p>Sidama is one of Ethiopia's respected coffee-producing regions.</p></div>
-
         </div>
       </section>
-
-
-     
 
 
 
       <section style={whySection}>
         <div style={whyContainer}>
-
           <div>
             <img
               src={originLandscape}
               alt="Sidama Coffee Landscape"
-              style={whyImage}
-            />
-          </div>
-
+              style={whyImage} /></div>
           <div>
-            <h2 style={sectionTitle}>Why Choose Dancha BunAgi Export</h2>
+            <h2 style={sectionTitle}>Why Partner with Dancha BunAgi Export</h2>
 
             <h3 style={whySubtitle}>
               More Than a Supplier — A Trusted Ethiopian Coffee Export Partner
@@ -314,44 +329,61 @@ function Home() {
 
             <div style={featureGrid}>
 
-              <div>✔ Direct sourcing from Sidama farmers</div>
-              <div>✔ Premium washed Arabica coffee</div>
-              <div>✔ 20+ years family experience</div>
-              <div>✔ Export company established in 2025</div>
-              <div>✔ Full traceability</div>
-              <div>✔ Flexible export solutions</div>
-              <div>✔ Reliable logistics support</div>
-              <div>✔ Long-term business partnerships</div>
+              <div style={featureCard}>
+                <Award size={20} color="#C89B3C" /><span>Direct sourcing from Sidama farmers</span></div>
 
+              <div style={featureCard}>
+                <Award size={20} color="#C89B3C" /><span>Premium washed Arabica coffee</span></div>
+
+              <div style={featureCard}>
+                <Award size={20} color="#C89B3C" /><span>20+ years family experience</span></div>
+
+              <div style={featureCard}>
+                <Award size={20} color="#C89B3C" /><span>Export company established in 2025</span></div>
+
+              <div style={featureCard}>
+                <Award size={20} color="#C89B3C" /><span>Full traceability</span></div>
+
+              <div style={featureCard}>
+                <Award size={20} color="#C89B3C" /><span>Flexible export solutions</span></div>
+
+              <div style={featureCard}>
+                <Award size={20} color="#C89B3C" /><span>Reliable logistics support</span></div>
+
+              <div style={featureCard}>
+                <Award size={20} color="#C89B3C" /><span>Long-term business partnerships</span></div>
             </div>
-
           </div>
-
         </div>
       </section>
 
-      <section style={ctaStyle}>
-        <h2>Ready to Source Premium Ethiopian Coffee?</h2>
-        <p>Contact Dancha Buna Agi Export today to discuss your coffee requirements.</p>
 
-        <Link to="/contact">
-          <button style={buttonStyle}>Contact Us</button>
+
+      <section style={ctaStyle}>
+        <h2 style={ctaTitle}>
+          Let's Build Your Coffee Supply Partnership
+        </h2><p style={ctaText}>
+          Whether you're a specialty coffee roaster, importer, or wholesaler,
+          we're ready to help you source premium Ethiopian Arabica coffee
+          directly from Sidama.</p>
+        <Link to="/contact"><button style={buttonStyle}>Request a Quote</button>
         </Link>
       </section>
 
-      <footer style={footerStyle}>
 
+      <footer style={footerStyle}>
         <div style={footerGrid}>
           <div>
-            <h2 style={{ color: "#d4a017" }}>Dancha Buna Agi Export</h2>
+            <h2 style={footerLogo}>Dancha Buna Agi Export</h2>
             <p>
               Premium washed Arabica coffee from the Sidama region of Ethiopia.
               Connecting origin coffee producers with global buyers.
             </p>
           </div>
 
+
           <div>
-            <h3 style={{ color: "#d4a017" }}>Quick Links</h3>
+            <h3 style={footerHeading}>Quick Links</h3>
             <p><Link to="/about" style={footerLink}>About Us</Link></p>
             <p><Link to="/coffee" style={footerLink}>Our Coffee</Link></p>
             <p><Link to="/services" style={footerLink}>Export Services</Link></p>
@@ -359,32 +391,21 @@ function Home() {
           </div>
 
           <div>
-            <h3 style={{ color: "#d4a017" }}>Contact</h3>
+            <h3 style={footerHeading}>Contact</h3>
             <p>📧 info@danchabuna.com</p>
             <p>📞 +44 7412 659033</p>
             <p>📞 +251 91 268 6827</p>
-            
           </div>
 
           <div>
-            <h3 style={{ color: "#d4a017" }}>Follow Us</h3>
-
+            <h3 style={footerHeading}>Follow Us</h3>
             <div
               style={{
                 display: "flex",
                 gap: "20px",
-                marginTop: "15px",
-              }}
-            >
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                <img
-                  className="social-icon"
-                  src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                  alt="LinkedIn"
-                  style={{ width: "28px", height: "28px", transition: "0.3s" }}
-                />
-              </a>
+                marginTop: "15px", }}>
 
+              
               <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" >
                 <img
                   className="social-icon"
@@ -424,78 +445,208 @@ function Home() {
   );
 }
 
+/*==============hero section============*/
+
 const heroStyle = {
-  backgroundImage: `url(${homeHero})`,
+  backgroundImage: `linear-gradient(rgba(20,15,10,0.45), rgba(20,15,10,0.45)), url(${homeHero})`,
   backgroundSize: "cover",
   backgroundPosition: "center",
-  minHeight: "550px",
+  minHeight: "92vh",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   textAlign: "center",
   color: "white",
+  padding: "10px 20px",
 };
-
 const heroOverlay = {
-  backgroundColor: "hsla(0, 2%, 39%, 0.29)",
-  padding: "40px",
-  borderRadius: "15px",
 
+  padding: "10px",
+  borderRadius: "20px",
+  maxWidth: "1500px",
 };
 
 const heroTitle = {
-  fontSize: "68px",
-  marginBottom: "20px",
-
+  fontSize: "66px",
+  fontWeight: "600",
+  lineHeight: "1.15",
+  color: "#ffffff",
+  margin: "15px 0 25px",
+  letterSpacing: "-1px",
 };
 
 const heroSubtitle = {
-  fontSize: "30px",
-  marginBottom: "20px",
-  color: "rgb(209, 154, 13)"
+  fontSize: "20px",
+  color: "#C89B3C",
+  textTransform: "uppercase",
+  letterSpacing: "3px",
+  fontWeight: "600",
+  marginBottom: "15px",
 };
 
 const heroText = {
-  maxWidth: "800px",
-  margin: "20px auto",
+  maxWidth: "760px",
+  margin: "0 auto 40px",
   fontSize: "20px",
-  lineHeight: "1.6",
+  lineHeight: "1.8",
+  color: "#F3F3F3",
+  fontWeight: "300",
 };
 
 const buttonStyle = {
-  background: "#d4a017",
-  color: "white",
+  background: "linear-gradient(135deg, #C89B3C, #B8860B)",
+  color: "#fff",
   border: "none",
-  padding: "15px 30px",
-  borderRadius: "5px",
+  padding: "16px 36px",
+  borderRadius: "10px",
   cursor: "pointer",
-  fontSize: "18px",
+  fontSize: "17px",
+  fontWeight: "600",
+  letterSpacing: "0.5px",
+  boxShadow: "0 10px 25px rgba(200,155,60,.25)",
+  transition: "all .3s ease",
 };
 
+
+/*=========highlight section=======*/
+
 const highlightsSection = {
-  padding: "50px 20px",
-  background: "#f8f8f8",
+  padding: "40px 20px 20px",
+  background: "#FAF8F4",
 };
 
 const highlightGrid = {
-  maxWidth: "1200px",
+  maxWidth: "1300px",
   margin: "0 auto",
   display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
-  gap: "20px",
+  gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+  gap: "25px",
 };
 
 const highlightCard = {
-  background: "white",
-  padding: "25px",
+  background: "#ffffff",
+  padding: "10px 10px",
+  borderRadius: "18px",
   textAlign: "center",
-  borderRadius: "12px",
-  boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
-  fontSize: "22px",
-  fontWeight: "bold",
-  color: "#4b2e1e",
-  transition: "all 0.3s ease",
+  boxShadow: "0 12px 30px rgba(0,0,0,0.08)",
+  transition: "all .35s ease",
   cursor: "pointer",
+  border: "1px solid rgba(0,0,0,.05)",
+};
+
+const highlightValue = {
+  marginTop: "20px",
+  marginBottom: "8px",
+  color: "#3A2417",
+  fontSize: "24px",
+  fontWeight: "600",
+};
+
+const highlightLabel = {
+  color: "#777",
+  fontSize: "15px",
+  letterSpacing: "0.6px",
+  textTransform: "uppercase",
+};
+
+/*============= story section ============*/
+
+
+const brandSubtitle = {
+  textAlign: "center",
+  color: "#C89B3C",
+  fontSize: "28px",
+  letterSpacing: "4px",
+  marginTop: "-30px",
+  marginBottom: "20px",
+  textTransform: "uppercase",
+};
+
+const nameIntro = {
+  maxWidth: "720px",
+  margin: "0 auto 60px",
+  textAlign: "center",
+  color: "#777",
+  fontSize: "21px",
+  fontStyle: "italic",
+  lineHeight: "1.8",
+};
+
+const nameItem = {
+  maxWidth: "900px",
+  margin: "0 auto 55px",
+};
+
+const nameTitle = {
+  color: "#3A2417",
+  fontSize: "36px",
+  marginBottom: "15px",
+  fontWeight: "600",
+};
+
+const nameMeaning = {
+  color: "#d4a017",
+  fontSize: "26px",
+  marginBottom: "10px",
+  fontWeight: "700",
+};
+
+const nameText = {
+  fontSize: "20px",
+  color: "#555",
+  lineHeight: "2",
+  fontWeight: "300",
+};
+
+const divider = {
+  width: "120px",
+  margin: "45px auto",
+  borderTop: "2px solid rgba(200,155,60,.4)",
+};
+
+const nameSection = {
+  padding: "70px 10%",
+  background: "linear-gradient(135deg, #faf8f3 0%, #f5efe5 50%, #faf8f3 100%)",
+};
+
+const meaningBox = {
+  marginTop: "45px",
+  textAlign: "center",
+};
+
+const goldLine = {
+  display: "none",
+};
+
+const meaningTitle = {
+  fontSize: "40px",
+  color: "#4b2e1e",
+  fontWeight: "700",
+  margin: "15px 0",
+};
+
+const meaningText = {
+  maxWidth: "820px",
+  margin: "0 auto",
+  fontSize: "20px",
+  color: "#555",
+  lineHeight: "1.8",
+};
+
+const meaningInline = {
+  color: "#d4a017",
+  fontSize: "22px",
+  fontWeight: "600",
+};
+
+const storyBox = {
+  maxWidth: "1500px",
+  margin: "0 auto",
+  background: "#ffffff",
+  borderRadius: "24px",
+  padding: "30px",
+  boxShadow: "0 15px 40px rgba(0,0,0,0.08)",
+  border: "1px solid #eee",
 };
 
 const aboutSection = {
@@ -606,6 +757,7 @@ const processCard = {
   minHeight: "180px",
 };
 
+
 const gallerySection = {
   padding: "80px 20px",
   textAlign: "center",
@@ -619,12 +771,13 @@ const galleryGrid = {
   gridTemplateColumns: "repeat(3, 1fr)",
   gap: "30px",
 };
+
 const galleryImage = {
   width: "100%",
-  height: "460px",
+  height: "520px",
   objectFit: "cover",
-  borderRadius: "2px",
-  boxShadow: "0 12px 20px rgba(0,0,0,0.18)",
+  borderRadius: "18px",
+  boxShadow: "0 15px 30px rgba(0,0,0,0.15)",
 };
 
 const sidamaSection = {
@@ -650,6 +803,17 @@ const sidamaCard = {
   cursor: "pointer",
 };
 
+
+const sidamaTitle = {
+  marginTop: "18px",
+  marginBottom: "12px",
+  fontSize: "24px",
+  color: "#3A2417",
+  fontWeight: "600",
+};
+
+
+
 const whySection = {
   background: "#f8f8f8",
   padding: " 0px",
@@ -673,68 +837,41 @@ const whyCard = {
   cursor: "pointer",
 };
 
+
+
+
 const ctaStyle = {
-  background: "#245b1f",
+  backgroundImage: `
+    linear-gradient(
+      rgba(20,20,20,0.60),
+      rgba(20,20,20,0.60)
+    ),
+    url(${ctaCoffee})
+  `,
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
   color: "white",
   textAlign: "center",
-  padding: "30px 20px",
+  padding: "120px 20px",
 };
 
-const footerStyle = {
-  background: "#4a2511",
-  color: "white",
-  padding: "30px 20px",
+const ctaTitle = {
+  fontSize: "52px",
+  fontWeight: "600",
+  marginBottom: "25px",
+  color: "#ffffff",
 };
 
-const footerGrid = {
-  display: "grid",
-  gridTemplateColumns: "2fr 1fr 1fr 1fr",
-  gap: "50px",
-  maxWidth: "1200px",
-  margin: "0 auto",
-  alignItems: "start",
-};
-const chatStyle = {
-  position: "fixed",
-  bottom: "30px",
-  right: "30px",
-  display: "flex",
-  alignItems: "center",
-  gap: "10px",
-  zIndex: "1000",
+const ctaText = {
+  maxWidth: "760px",
+  margin: "0 auto 40px",
+  fontSize: "21px",
+  lineHeight: "1.8",
+  color: "#f4f4f4",
 };
 
-const chatText = {
-  background: "white",
-  padding: "12px 20px",
-  borderRadius: "15px",
-  boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
-};
 
-const chatButton = {
-  width: "60px",
-  height: "60px",
-  borderRadius: "50%",
-  background: "#25D366",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  color: "white",
-  fontSize: "28px",
-  textDecoration: "none",
-};
-
-const footerLink = {
-  color: "white",
-  textDecoration: "none",
-  transition: "0.3s",
-};
-const footerIcon = {
-  color: "white",
-  textDecoration: "none",
-  fontSize: "28px",
-  transition: "0.3s",
-};
 
 const originIntro = {
   maxWidth: "850px",
@@ -754,11 +891,12 @@ const journeyGrid = {
 };
 
 const journeyCard = {
-  background: "white",
-  borderRadius: "18px",
+  background: "#ffffff",
+  borderRadius: "22px",
   overflow: "hidden",
-  boxShadow: "0 10px 30px rgba(0,0,0,0.12)",
-  transition: "all 0.3s ease",
+  boxShadow: "0 15px 35px rgba(0,0,0,0.08)",
+  transition: "all 0.35s ease",
+  border: "1px solid rgba(0,0,0,0.05)",
 };
 
 const journeyImage = {
@@ -767,10 +905,17 @@ const journeyImage = {
   objectFit: "cover",
   display: "block",
 };
+
 const journeyText = {
-  padding: "22px",
+  padding: "30px",
   textAlign: "left",
 };
+
+
+
+
+
+
 const whyChooseGrid = {
   maxWidth: "1200px",
   margin: "40px auto 0",
@@ -813,15 +958,24 @@ const whySubtitle = {
 
 const featureGrid = {
   display: "grid",
-  gridTemplateColumns: "repeat(2,1fr)",
+  gridTemplateColumns: "repeat(2, minmax(220px, 1fr))",
   gap: "18px",
-  marginTop: "35px",
-  fontSize: "18px",
-  lineHeight: "1.8",
-  color: "#333",
-  textAlign: "center",
+  marginTop: "40px",
 };
 
+const featureCard = {
+  display: "flex",
+  alignItems: "center",
+  gap: "5px",
+  background: "#ffffff",
+  padding: "10px 18px",
+  borderRadius: "10px",
+  border: "1px solid rgba(0,0,0,0.05)",
+  boxShadow: "0 8px 20px rgba(0,0,0,0.06)",
+  fontSize: "15px",
+  color: "#3A2417",
+  fontWeight: "500",
+};
 
 const beanCard = {
   width: "100%",
@@ -858,95 +1012,92 @@ const aboutText = {
 
 
 
-const nameIntro = {
-  textAlign: "center",
-  color: "#777",
-  fontSize: "19px",
-  marginBottom: "40px",
-  fontStyle: "italic",
-};
-
-const nameItem = {
-  maxWidth: "900px",
-  margin: "0 auto",
-};
-
-const nameTitle = {
-  color: "#4b2e1e",
-  fontSize: "32px",
-  marginBottom: "10px",
-};
-
-const nameMeaning = {
-  color: "#d4a017",
-  fontSize: "26px",
-  marginBottom: "10px",
-  fontWeight: "700",
-};
-
-const nameText = {
-  fontSize: "20px",
-  color: "#555",
-  lineHeight: "1.7",
-};
-
-const divider = {
-  margin: "30px auto",
-  width: "100%",
-  maxWidth: "900px",
-  borderTop: "1px solid #ddd",
-};
 
 
-
-
-const nameSection = {
-  padding: "70px 10%",
-  background: "linear-gradient(135deg, #faf8f3 0%, #f5efe5 50%, #faf8f3 100%)",
-};
-
-const meaningBox = {
-  marginTop: "45px",
-  textAlign: "center",
-};
-
-const goldLine = {
-  width: "120px",
-  height: "3px",
-  background: "#d4a017",
-  margin: "20px auto",
-  borderRadius: "5px",
-};
-
-const meaningTitle = {
-  fontSize: "40px",
-  color: "#4b2e1e",
-  fontWeight: "700",
-  margin: "15px 0",
-};
-
-const meaningText = {
-  maxWidth: "820px",
-  margin: "0 auto",
-  fontSize: "20px",
-  color: "#555",
-  lineHeight: "1.8",
-};
-
-const meaningInline = {
-  color: "#d4a017",
+const processTitle = {
+  marginTop: "18px",
   fontSize: "22px",
+  fontWeight: "600",
+  color: "#3A2417",
+  marginBottom: "12px",
+};
+
+  
+
+
+const footerLogo = {
+  color: "#C89B3C",
+  fontSize: "32px",
+  fontWeight: "600",
+  marginBottom: "20px",
+};
+
+const footerHeading = {
+  color: "#C89B3C",
+  fontSize: "26px",
+  marginBottom: "20px",
   fontWeight: "600",
 };
 
-const storyBox = {
-  maxWidth: "1100px",
-  margin: "0 auto",
-  background: "#ffffff",
-  borderRadius: "24px",
-  padding: "60px",
-  boxShadow: "0 15px 40px rgba(0,0,0,0.08)",
-  border: "1px solid #eee",
+const footerStyle = {
+  background: "linear-gradient(to bottom, rgba(36,22,15,0.95), #24160F)",
+  color: "#F5F1EB",
+  padding: "80px 50px 35px",
+  borderTop: "2px solid #C89B3C",
 };
+const footerGrid = {
+  display: "grid",
+  gridTemplateColumns: "2fr 1fr 1fr 1fr",
+  gap: "80px",
+  maxWidth: "1200px",
+  margin: "0 auto",
+  alignItems: "start",
+};
+
+const chatStyle = {
+  position: "fixed",
+  bottom: "30px",
+  right: "30px",
+  display: "flex",
+  alignItems: "center",
+  gap: "10px",
+  zIndex: "1000",
+};
+
+const chatText = {
+  background: "white",
+  padding: "12px 20px",
+  borderRadius: "15px",
+  boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
+};
+
+const chatButton = {
+  width: "60px",
+  height: "60px",
+  borderRadius: "50%",
+  background: "#25D366",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  color: "white",
+  fontSize: "28px",
+  textDecoration: "none",
+};
+
+const footerLink = {
+  color: "white",
+  textDecoration: "none",
+  transition: "0.3s",
+};
+const footerIcon = {
+  color: "white",
+  textDecoration: "none",
+  fontSize: "28px",
+  transition: "0.3s",
+};
+
+
+
+
 
 export default Home;
