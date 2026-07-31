@@ -7,6 +7,17 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+
+const handleNavigation = () => {
+  setMenuOpen(false);
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "auto",
+  });
+};
+
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
@@ -36,27 +47,34 @@ function Navbar() {
 
       <div className={`nav-links ${menuOpen ? "active" : ""}`}>
 
-        <NavLink to="/" end className="nav-link" onClick={() => setMenuOpen(false)}>
+        <NavLink to="/" end className="nav-link" onClick={handleNavigation}>
           Home
         </NavLink>
 
-        <NavLink to="/about" className="nav-link" onClick={() => setMenuOpen(false)}>
-          About
-        </NavLink>
+        <NavLink
+  to="/about"
+  className="nav-link"
+  onClick={() => {
+    setMenuOpen(false);
+    window.scrollTo(0, 0);
+  }}
+>
+  About
+</NavLink>
 
-        <NavLink to="/coffee" className="nav-link" onClick={() => setMenuOpen(false)}>
+        <NavLink to="/coffee" className="nav-link" onClick={handleNavigation}>
           Coffee
         </NavLink>
 
-        <NavLink to="/services" className="nav-link" onClick={() => setMenuOpen(false)}>
+        <NavLink to="/services" className="nav-link" onClick={handleNavigation}>
           Services
         </NavLink>
 
-        <NavLink to="/contact" className="nav-link" onClick={() => setMenuOpen(false)}>
+        <NavLink to="/contact" className="nav-link" onClick={handleNavigation}>
           Contact
         </NavLink>
 
-        <Link to="/contact" onClick={() => setMenuOpen(false)}>
+        <Link to="/contact" onClick={handleNavigation}>
           <button className="quote-btn">
             Request Quote
           </button>

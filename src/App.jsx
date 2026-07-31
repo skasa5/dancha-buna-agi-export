@@ -8,22 +8,22 @@ import About from "./pages/About";
 import Coffee from "./pages/Coffee";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
-
+import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+  <Navbar />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/coffee" element={<Coffee />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/about" element={<About />} />
+    <Route path="/coffee" element={<Coffee />} />
+    <Route path="/services" element={<Services />} />
+    <Route path="/contact" element={<Contact />} />
+  </Routes>
 
-      <Footer />
-    </BrowserRouter>
+  <Footer />
+</BrowserRouter>
   );
 }
 
