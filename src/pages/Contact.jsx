@@ -1,108 +1,125 @@
+import "../styles/Contact.css";
+import {
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
+
+import { Clock3 } from "lucide-react";
+
 function Contact() {
   return (
     <div>
-      <section style={heroStyle}>
-        <h1>Contact Us</h1>
-        <p>Get in touch with Dancha BunAgi Export to discuss your coffee needs.</p>
+      <section className="contact-hero">
+        <div className="contact-overlay">
+          <div className="gold-line"></div>
+          <h1>Contact Us</h1>
+
+          <p>
+            Get in touch with Dancha BunAgi Export to discuss your coffee needs.
+          </p>
+        </div>
       </section>
 
-      <section style={contactCardsSection}>
-        <div style={contactCard}>📧<h3>Email</h3><p>info@danchabuna.com</p></div>
-        <div style={contactCard}>📞<h3>WhatsApp</h3><p>+44 7412 659033</p></div>
-        <div style={contactCard}>📍<h3>Origin</h3><p>Sidama, Ethiopia</p></div>
+
+
+      <section className="contact-cards">
+        <div className="contact-card">
+          <Mail className="contact-icon" />
+          <h3>Email</h3>
+
+          <a
+            href="mailto:info@danchabuna.com"
+            className="contact-link">
+            info@danchabuna.com
+          </a>
+        </div>
+
+        <div className="contact-card">
+          <Phone className="contact-icon" />
+          <h3>WhatsApp</h3>
+
+          <a
+            href="https://wa.me/447412659033"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-link">
+            +44 7412 659033
+          </a>
+        </div>
+
+        <div className="contact-card">
+          <MapPin className="contact-icon" />
+          <h3>Location</h3>
+          <p>Hawassa Sidama, Ethiopia</p></div>
+
+        <div className="contact-card">
+          <Clock3 className="contact-icon" />
+          <h3>Business Hours</h3>
+
+          <p>Monday – Friday<br />9:00 AM – 5:00 PM (EAT)</p></div>
       </section>
 
-      <section style={formSection}>
-        <h2>Request a Quote</h2>
 
-        <form style={formStyle}>
-          <input style={inputStyle} type="text" placeholder="Full Name" />
-          <input style={inputStyle} type="text" placeholder="Company Name" />
-          <input style={inputStyle} type="text" placeholder="Country" />
-          <input style={inputStyle} type="email" placeholder="Email Address" />
-          <input style={inputStyle} type="text" placeholder="Phone Number" />
+      <section className="contact-form-section">
+        <div className="contact-form-container">
+          <div className="gold-line"></div>
+          <h2 className="section-title">
+            Request a Quote
+          </h2>
 
-          <select style={inputStyle}>
-            <option>Coffee Requirement</option>
-            <option>Washed Arabica Coffee</option>
-            <option>Green Coffee Beans</option>
-            <option>Sample Request</option>
-            <option>Export Partnership</option>
-          </select>
+          <p className="section-text">
+            Looking for premium Ethiopian Arabica coffee? Fill out the form below and
+            we'll get back to you as soon as possible.
+          </p>
 
-          <textarea
-            style={textareaStyle}
-            placeholder="Tell us about your coffee requirements..."
-          />
+          <form className="contact-form">
+            <input
+              className="form-input"
+              type="text"
+              placeholder="Full Name" />
 
-          <button style={buttonStyle}>Send Enquiry</button>
-        </form>
+            <input
+              className="form-input"
+              type="text"
+              placeholder="Company Name" />
+
+            <input
+              className="form-input"
+              type="text"
+              placeholder="Country" />
+
+            <input
+              className="form-input"
+              type="email"
+              placeholder="Email Address" />
+
+            <input
+              className="form-input"
+              type="text"
+              placeholder="Phone Number" />
+
+            <select className="form-input">
+              <option>Coffee Requirement</option>
+              <option>Washed Arabica Coffee</option>
+              <option>Sample Request</option>
+              <option>Export Partnership</option>
+            </select>
+
+
+            <textarea
+              className="form-textarea"
+              placeholder="Tell us about your coffee requirements..."
+            ></textarea>
+            <button className="contact-button">
+              Send Enquiry
+            </button>
+          </form>
+        </div>
       </section>
     </div>
   );
 }
 
-const heroStyle = {
-  background: "#4b2e1e",
-  color: "white",
-  textAlign: "center",
-  padding: "120px 20px",
-};
-
-const contactCardsSection = {
-  display: "flex",
-  justifyContent: "center",
-  gap: "25px",
-  flexWrap: "wrap",
-  padding: "60px 20px",
-  background: "#f8f8f8",
-};
-
-const contactCard = {
-  background: "white",
-  width: "260px",
-  padding: "30px",
-  borderRadius: "15px",
-  textAlign: "center",
-  boxShadow: "0 6px 20px rgba(0,0,0,0.1)",
-  fontSize: "18px",
-};
-
-const formSection = {
-  maxWidth: "800px",
-  margin: "70px auto",
-  padding: "40px",
-  background: "white",
-  borderRadius: "20px",
-  boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
-};
-
-const formStyle = {
-  display: "grid",
-  gap: "18px",
-};
-
-const inputStyle = {
-  padding: "15px",
-  fontSize: "16px",
-  border: "1px solid #ddd",
-  borderRadius: "8px",
-};
-
-const textareaStyle = {
-  ...inputStyle,
-  minHeight: "150px",
-};
-
-const buttonStyle = {
-  background: "#d4a017",
-  color: "white",
-  border: "none",
-  padding: "16px",
-  borderRadius: "8px",
-  cursor: "pointer",
-  fontSize: "18px",
-  fontWeight: "bold",
-};
 
 export default Contact;

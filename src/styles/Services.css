@@ -1,0 +1,145 @@
+/*=====================================
+            HERO
+======================================*/
+
+.services-hero{
+
+    background-image:
+        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+        url("../images/about-coffee-station.jpg");
+
+    background-size:cover;
+    background-position:center;
+    padding:170px 20px;
+    text-align:center;
+    color:#fff;
+}
+
+.services-overlay{
+
+    max-width:900px;
+    margin:0 auto;
+}
+
+.services-overlay h1{
+
+    font-size:64px;
+    margin-bottom:20px;
+    font-weight:700;
+}
+
+.services-overlay p{
+
+    font-size:22px;
+    line-height:1.8;
+    color:#f5f5f5;
+    max-width:700px;
+    margin:auto;
+}
+
+@media (max-width:768px){
+
+    .services-overlay h1{
+
+        font-size:46px;
+
+    }
+
+    .services-overlay p{
+
+        font-size:18px;
+
+    }
+
+}
+/*=====================================
+        WHAT WE OFFER
+======================================*/
+
+.services-section{
+    padding:100px 20px;
+    background:#ffffff;
+}
+
+.services-container{
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.service-card{
+    background:#fff;
+    padding:35px 30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    
+    transition:.3s ease;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(0,0,0,.12);
+}
+
+.service-icon{
+    width:42px;
+    height:42px;
+    color:#C89B3C;
+    margin-bottom:18px;
+}
+
+.service-card h3{
+    color:#4b2e1e;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.service-card p{
+    color:#666;
+    line-height:1.8;
+}
+
+/*=====================================
+        WHY CHOOSE US
+======================================*/
+
+.why-section{
+    padding:100px 20px;
+    background:linear-gradient(135deg,#fff7e6 0%,#eef5ea 100%);
+}
+
+/*=====================================
+            SERVICES CTA
+======================================*/
+
+.services-cta{
+    background:#3d2518;
+    color:#fff;
+    text-align:center;
+    padding:10px 20px;
+}
+
+.services-cta .cta-overlay{
+    max-width:800px;
+    margin:0 auto;
+}
+
+.services-cta h2{
+    font-size:46px;
+    margin-bottom:20px;
+    color:#fff;
+}
+
+.services-cta p{
+    color:#e6dfd5;
+    font-size:18px;
+    line-height:1.9;
+    margin:0 auto 40px;
+}

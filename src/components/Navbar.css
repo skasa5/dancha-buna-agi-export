@@ -15,12 +15,18 @@
 
     background:transparent;
 
-    transition:.35s ease;
+   transition:
+background .35s ease,
+padding .35s ease,
+box-shadow .35s ease;
 }
 
 .navbar.scrolled{
-    background:#9a9c9c;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    background:rgba(165, 163, 163, 0.97);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
 .logo{
@@ -104,6 +110,16 @@
     color:#3A2417;
 }
 
+.logo{
+    height:90px;
+    display:block;
+
+    transition:.3s ease;
+}
+
+.navbar.scrolled .logo{
+    height:78px;
+}
 /*==========================
       MOBILE
 ==========================*/
@@ -129,11 +145,23 @@
     left:0;
     width:100%;
 
-    display:none;
+    opacity:0;
+
+visibility:hidden;
+
+transform:translateY(-20px);
+
+pointer-events:none;
+
+transition:.35s ease;
     flex-direction:column;
     gap:24px;
 
-    background:white;
+   background:#ffffff;
+
+border-top:1px solid #eee;
+
+border-radius:0 0 20px 20px;
 
     padding:30px;
 
@@ -142,9 +170,17 @@
 }
 
 .nav-links.active{
-    display:flex;
-}
 
+    display:flex;
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+    pointer-events:auto;
+}
 .nav-link{
     color:#3A2417;
 }
@@ -153,4 +189,9 @@
     width:220px;
 }
 
+}
+
+.quote-btn:active{
+
+    transform:scale(.97);
 }
