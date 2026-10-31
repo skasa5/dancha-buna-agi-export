@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "../styles/Coffee.css";
 import { Link } from "react-router-dom";
 import dryingBeds1 from "../images/origin-drying-station.jpg";
@@ -14,6 +15,20 @@ import {
   Ship,
 } from "lucide-react";
 function Coffee() {
+    useEffect(() => {
+    document.title = "Premium Sidama Arabica Coffee | Dancha BunAgi Export";
+
+    let description = document.querySelector('meta[name="description"]');
+
+    if (!description) {
+      description = document.createElement("meta");
+      description.name = "description";
+      document.head.appendChild(description);
+    }
+
+    description.content =
+      "Explore premium washed Sidama Arabica coffee from Ethiopia. Discover our coffee origin, quality, processing and export specifications.";
+  }, []);
   return (
     <div>
       <section className="coffee-hero">

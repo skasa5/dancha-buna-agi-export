@@ -1,5 +1,6 @@
 import "../styles/About.css";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import coffeeStation from "../images/drying-beds-1.jpg";
 import aboutHero from "../images/about-coffee-station.jpg";
 import {
@@ -37,7 +38,23 @@ const values = [
   },
 ];
 
-function About() {
+    function About() {
+  useEffect(() => {
+    document.title = "About Dancha BunAgi Export | Ethiopian Coffee";
+
+    let description = document.querySelector('meta[name="description"]');
+
+    if (!description) {
+      description = document.createElement("meta");
+      description.name = "description";
+      document.head.appendChild(description);
+    }
+
+    description.content =
+      "Discover the story of Dancha BunAgi Export, an Ethiopian coffee exporter connecting international buyers with premium Sidama Arabica coffee.";
+
+  }, []);
+
   return (
     <div>
       <section className="about-hero">

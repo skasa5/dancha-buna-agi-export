@@ -1,5 +1,6 @@
 import "../styles/Services.css";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import {
   Coffee as CoffeeIcon,
   ShieldCheck,
@@ -9,7 +10,23 @@ import {
   Handshake,
   Leaf,
 } from "lucide-react";
-function Services() {
+
+    function Services() {
+  useEffect(() => {
+    document.title = "Coffee Export Services | Dancha BunAgi Export";
+
+    let description = document.querySelector('meta[name="description"]');
+
+    if (!description) {
+      description = document.createElement("meta");
+      description.name = "description";
+      document.head.appendChild(description);
+    }
+
+    description.content =
+      "Explore Dancha BunAgi Export services, including Ethiopian Sidama coffee sourcing, quality selection, export preparation and international shipping.";
+  }, []);
+
   return (
     <div>
   <section className="services-hero">

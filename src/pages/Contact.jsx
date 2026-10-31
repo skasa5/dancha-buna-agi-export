@@ -1,4 +1,5 @@
 import "../styles/Contact.css";
+import { useEffect } from "react";
 import {
   Mail,
   Phone,
@@ -7,7 +8,22 @@ import {
 
 import { Clock3 } from "lucide-react";
 
-function Contact() {
+    function Contact() {
+  useEffect(() => {
+    document.title = "Contact Dancha BunAgi Export | Ethiopian Coffee";
+
+    let description = document.querySelector('meta[name="description"]');
+
+    if (!description) {
+      description = document.createElement("meta");
+      description.name = "description";
+      document.head.appendChild(description);
+    }
+
+    description.content =
+      "Contact Dancha BunAgi Export to discuss premium Ethiopian Sidama Arabica coffee, sourcing, export enquiries and international coffee partnerships.";
+  }, []);
+
   return (
     <div>
       <section className="contact-hero">
